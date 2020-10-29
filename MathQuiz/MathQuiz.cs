@@ -8,9 +8,9 @@ using Jypeli.Widgets;
 
 
 /// @author Noora Jokela ja Janne Taipalus
-/// @version 6.5.2019
+/// @version 29.10.2020
 ///  <summary>
-///  Pelaajalle annetaan satunnaisesti valittu yhteen-, vähennys- tai kertolasku, joka hänen pitää ratkaista aikarajan sisällä. Oikeista vastauksista saa pisteitä, vääristä vastauksista elämiä. Kun kaikki elämät ovat menneet, peli päättyy.
+///  Pelaajalle annetaan satunnaisesti valittu yhteen-, vähennys- tai kertolasku, joka hänen pitää ratkaista aikarajan sisällä. Oikeista vastauksista saa pisteitä, väärästä vastauksesta peli päättyy.
 /// </summary>
 public class MathQuiz : Game
 
@@ -57,7 +57,7 @@ public class MathQuiz : Game
         ClearAll();
         LataaAanet();
         AloitaMusiikki();
-        MultiSelectWindow alkuvalikko = new MultiSelectWindow("Alkuvalikko/Menu", "Aloita peli/Begin","Pelaa ilman ajastinta", "Pistelista/Point List", "Ajastamattoman tilan pistelista", "Tekijät/Creators", "Lopeta/Exit");
+        MultiSelectWindow alkuvalikko = new MultiSelectWindow("Alkuvalikko/Menu", "Aloita peli/Begin", "Pelaa ilman ajastinta/Play without a timer", "Pistelista/Point List", "Ajastamattoman tilan pistelista/Point list of the timerless mode", "Tekijät/Creators", "Lopeta/Exit");
         alkuvalikko.AddItemHandler(0, AloitaAjastinPeli);
         alkuvalikko.AddItemHandler(1, AloitaAjastimetonPeli);
         alkuvalikko.AddItemHandler(2, Pistelista);
